@@ -20,9 +20,13 @@ class Comfy::Blog::PostsController < Comfy::Blog::BaseController
   end
 
   def index
+    @categories = @blog.categories
     scope = if params[:year]
       scope = @blog.posts.published.for_year(params[:year])
       params[:month] ? scope.for_month(params[:month]) : scope
+    elsif params[:category_slug]
+      @category = @categories.where(:slug => params[:category_slug]).first!
+      scope = @category.posts.published
     else
       @blog.posts.published
     end
@@ -39,6 +43,7 @@ class Comfy::Blog::PostsController < Comfy::Blog::BaseController
   end
 
   def show
+    @categories = @blog.categories
     @post = if params[:slug] && params[:year] && params[:month]
       @blog.posts.published.where(:year => params[:year], :month => params[:month], :slug => params[:slug]).first!
     else
