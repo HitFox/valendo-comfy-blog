@@ -12,7 +12,7 @@ class ActionDispatch::Routing::Mapper
           o.get ':year/:month/:slug'  => 'posts#show',  :as => :posts_dated
         end
         get 'categories/:category_slug' =>'posts#index', :as => :category
-        post ':slug/comments' => 'comments#create', :as => :comments
+        # post ':slug/comments' => 'comments#create', :as => :comments
         get  ':slug'          => 'posts#serve',     :as => :post
         get  '/'              => 'posts#serve',     :as => :posts
       end

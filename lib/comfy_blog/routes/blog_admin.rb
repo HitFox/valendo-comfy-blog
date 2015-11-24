@@ -11,9 +11,9 @@ class ActionDispatch::Routing::Mapper
             resources :posts
             resources :categories
             resources :categorizations
-            resources :comments, :only => [:index, :destroy] do
-              patch :toggle_publish, :on => :member
-            end
+            # resources :comments, :only => [:index, :destroy] do
+            #   patch :toggle_publish, :on => :member
+            # end
           end
         end
       end
