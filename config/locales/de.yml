@@ -4,6 +4,12 @@ de:
       comfy/blog/blog: Blog
       comfy/blog/post: Beitrag
       comfy/blog/comment: Kommentar
+      comfy/blog/categorization:
+        one: Kategorisierungs
+        other: Kategorisierungen
+      comfy/blog/category:
+        one: Kategorie
+        other: Kategorien
     attributes:
       comfy/blog/blog:
         identifier: Identifikator
@@ -18,6 +24,10 @@ de:
         excerpt: Auszug
         published_at: Veröffentlicht am
         is_published: Ist veröffentlicht
+      comfy/blog/categorization:
+      comfy/blog/category:
+        name: Name
+        slug: Slug
       comfy/blog/comment:
         author: Autor
         email: E-Mail
@@ -31,6 +41,8 @@ de:
         base:
           blogs: Blogs
           posts: Beiträge
+          categories: Kategorien
+          categorization: Kategorisierungs
           comments: Kommentare
       blog:
         blogs:
@@ -87,6 +99,28 @@ de:
             page_title: Neuer Blogbeitrag
           edit:
             page_title: Blogbeitrag ändern
+          form:
+            cancel: Abbrechen
+        categorizations:
+          index:
+            page_title: Kategorisierungs
+            new_blog_categorization: Neue Kategorisierungs
+            edit: Ändern
+          edit:
+            page_title: Kategorisierungs ändern
+          new:
+            page_title: Neue Kategorisierungs
+          form:
+            cancel: Abbrechen
+        categories:
+          index:
+            page_title: Kategorien
+            new_blog_category: Neue Kategorie
+            edit: Ändern
+          edit:
+            page_title: Kategorie ändern
+          new:
+            page_title: Neue Kategorie
           form:
             cancel: Abbrechen
         comments:

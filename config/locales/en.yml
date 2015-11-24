@@ -3,6 +3,12 @@ en:
     models:
       comfy/blog/blog: Blog
       comfy/blog/post: Post
+      comfy/blog/categorization:
+        one: Categorization
+        other: Categorizations
+      comfy/blog/category:
+        one: Category
+        other: Categories
       comfy/blog/comment: Comment
     attributes:
       comfy/blog/blog:
@@ -18,6 +24,10 @@ en:
         excerpt: Excerpt
         published_at: Published at
         is_published: Is published
+      comfy/blog/categorization:
+      comfy/blog/category:
+        name: Name
+        slug: Slug
       comfy/blog/comment:
         author: Author
         email: Email
@@ -31,6 +41,8 @@ en:
         base:
           blogs: Blogs
           posts: Posts
+          categories: Categories
+          categorizations: Categorizations
           comments: Comments
       blog:
         blogs:
@@ -87,6 +99,28 @@ en:
             page_title: New blog post
           edit:
             page_title: Edit blog post
+          form:
+            cancel: Cancel
+        categorizations:
+          index:
+            page_title: Categorizations
+            new_blog_categorization: New categorization
+            edit: Edit
+          edit:
+            page_title: Edit categorization
+          new:
+            page_title: New categorization
+          form:
+            cancel: Cancel
+        categories:
+          index:
+            page_title: Categories
+            new_blog_category: New category
+            edit: Edit
+          edit:
+            page_title: Edit category
+          new:
+            page_title: New category
           form:
             cancel: Cancel
         comments:
