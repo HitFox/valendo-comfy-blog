@@ -25,9 +25,12 @@ de:
         published_at: Veröffentlicht am
         is_published: Ist veröffentlicht
       comfy/blog/categorization:
+        post_id: Beitrag
+        category_id: Kategorie
       comfy/blog/category:
         name: Name
         slug: Slug
+        description: Beschreibung
       comfy/blog/comment:
         author: Autor
         email: E-Mail
@@ -102,21 +105,38 @@ de:
           form:
             cancel: Abbrechen
         categorizations:
+          created: Kategorisierungs erstellt
+          create_failure: Erstellung des Kategorisierungen fehlgeschlagen
+          updated: Kategorisierungs aktualisiert
+          update_failure: Aktualisierung des Kategorisierungen fehlgeschlagen
+          deleted: Kategorisierungs gelöscht
+          not_found: Kategorisierungs nicht gefunden
           index:
             page_title: Kategorisierungs
             new_blog_categorization: Neue Kategorisierungs
             edit: Ändern
-          edit:
-            page_title: Kategorisierungs ändern
+            delete: Löschen
+            confirm_message: Sind Sie sicher?
           new:
             page_title: Neue Kategorisierungs
+          edit:
+            page_title: Kategorisierungs ändern
           form:
             cancel: Abbrechen
         categories:
+          created: Kategorie erstellt
+          create_failure: Erstellung des Kategorien fehlgeschlagen
+          updated: Kategorie aktualisiert
+          update_failure: Aktualisierung des Kategorien fehlgeschlagen
+          deleted: Kategorie gelöscht
+          not_found: Kategorie nicht gefunden
           index:
             page_title: Kategorien
             new_blog_category: Neue Kategorie
+            name: Name
             edit: Ändern
+            delete: Löschen
+            confirm_message: Sind Sie sicher?
           edit:
             page_title: Kategorie ändern
           new:
