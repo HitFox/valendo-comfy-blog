@@ -43,10 +43,29 @@ class CreateBlog < ActiveRecord::Migration
       :name => 'index_blog_comments_on_post_published_created'
   end
 
+  create_table :comfy_blog_categories, force: :cascade do |t|
+    t.string   :name
+    t.string   :slug
+    t.integer  :blog_id
+    t.datetime :created_at,       null: false
+    t.datetime :updated_at,       null: false
+    t.string   :description
+  end
+
+  create_table :comfy_blog_categorizations, force: :cascade do |t|
+    t.integer  :post_id
+    t.integer  :category_id
+    t.integer  :blog_id
+    t.datetime :created_at,  null: false
+    t.datetime :updated_at,  null: false
+  end
+
   def self.down
     drop_table :comfy_blogs
     drop_table :comfy_blog_posts
     drop_table :comfy_blog_comments
+    drop_table :comfy_blog_categories
+    drop_table :comfy_blog_categorizations
   end
 
 end
