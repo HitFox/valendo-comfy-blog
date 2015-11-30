@@ -41,23 +41,24 @@ class CreateBlog < ActiveRecord::Migration
     add_index :comfy_blog_comments, [:post_id, :created_at]
     add_index :comfy_blog_comments, [:post_id, :is_published, :created_at],
       :name => 'index_blog_comments_on_post_published_created'
-  end
 
-  create_table :comfy_blog_categories, force: :cascade do |t|
-    t.string   :name
-    t.string   :slug
-    t.integer  :blog_id
-    t.datetime :created_at,       null: false
-    t.datetime :updated_at,       null: false
-    t.string   :description
-  end
+    create_table :comfy_blog_categories, force: :cascade do |t|
+      t.string   :name
+      t.string   :slug
+      t.integer  :blog_id
+      t.string   :description
+      t.timestamps
+    end
 
-  create_table :comfy_blog_categorizations, force: :cascade do |t|
-    t.integer  :post_id
-    t.integer  :category_id
-    t.integer  :blog_id
-    t.datetime :created_at,  null: false
-    t.datetime :updated_at,  null: false
+    create_table :comfy_blog_categorizations, force: :cascade do |t|
+      t.integer  :post_id
+      t.integer  :category_id
+      t.timestamps
+    end
+    add_index :comfy_blog_categorizations, [:category_id],
+      :name => 'index_comfy_blog_categorizations_on_category_id'
+    add_index :comfy_blog_categorizations, [:post_id],
+      :name => 'index_comfy_blog_categorizations_on_post_id'
   end
 
   def self.down
