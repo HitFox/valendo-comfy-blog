@@ -10,7 +10,6 @@ class ActionDispatch::Routing::Mapper
           resources :blogs do
             resources :posts
             resources :categories
-            resources :categorizations
             # resources :comments, :only => [:index, :destroy] do
             #   patch :toggle_publish, :on => :member
             # end

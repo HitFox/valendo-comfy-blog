@@ -101,17 +101,6 @@ en:
             page_title: Edit blog post
           form:
             cancel: Cancel
-        categorizations:
-          index:
-            page_title: Categorizations
-            new_blog_categorization: New categorization
-            edit: Edit
-          edit:
-            page_title: Edit categorization
-          new:
-            page_title: New categorization
-          form:
-            cancel: Cancel
         categories:
           index:
             page_title: Categories

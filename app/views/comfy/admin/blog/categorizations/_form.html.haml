@@ -1,5 +1,0 @@
-= form.select :category_id, @blog.categories.collect {|c| [ c.name, c.id ] }
-= form.select :post_id, @blog.posts.collect {|p| [ p.title, p.id ] }
-= form.form_group :class => 'form-actions' do
-  = form.submit :class => 'btn btn-primary'
-  = link_to t('.cancel'), comfy_admin_blog_posts_path(@site, @blog), :class => 'btn btn-link'

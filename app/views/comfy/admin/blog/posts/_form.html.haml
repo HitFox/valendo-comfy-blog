@@ -6,6 +6,7 @@
 = form.text_field :published_at, :value => @post.published_at.try(:to_s, :db), :data => {'cms-datetime' => true}
 = form.form_group :is_published do
   = form.check_box :is_published
+= form.collection_check_boxes :category_ids, @blog.categories, :id, :name
 
 = form.form_group :class => 'form-actions' do
   = form.submit :class => 'btn btn-primary'

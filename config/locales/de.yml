@@ -24,6 +24,7 @@ de:
         excerpt: Auszug
         published_at: Veröffentlicht am
         is_published: Ist veröffentlicht
+        category_ids: Kategorien
       comfy/blog/categorization:
         post_id: Beitrag
         category_id: Kategorie
@@ -102,25 +103,6 @@ de:
             page_title: Neuer Blogbeitrag
           edit:
             page_title: Blogbeitrag ändern
-          form:
-            cancel: Abbrechen
-        categorizations:
-          created: Kategorisierungs erstellt
-          create_failure: Erstellung des Kategorisierungen fehlgeschlagen
-          updated: Kategorisierungs aktualisiert
-          update_failure: Aktualisierung des Kategorisierungen fehlgeschlagen
-          deleted: Kategorisierungs gelöscht
-          not_found: Kategorisierungs nicht gefunden
-          index:
-            page_title: Kategorisierungs
-            new_blog_categorization: Neue Kategorisierungs
-            edit: Ändern
-            delete: Löschen
-            confirm_message: Sind Sie sicher?
-          new:
-            page_title: Neue Kategorisierungs
-          edit:
-            page_title: Kategorisierungs ändern
           form:
             cancel: Abbrechen
         categories:
