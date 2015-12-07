@@ -12,7 +12,7 @@ class Comfy::Blog::PostsController < Comfy::Blog::BaseController
 
     load_blog
 
-    if params[:slug].present?
+    if params[:slug].present? && @blog.categories.where(:slug => params[:slug]).empty?
       show && render(:show)
     else
       index && render(:index)
@@ -24,8 +24,8 @@ class Comfy::Blog::PostsController < Comfy::Blog::BaseController
     scope = if params[:year]
       scope = @blog.posts.published.for_year(params[:year])
       params[:month] ? scope.for_month(params[:month]) : scope
-    elsif params[:category_slug]
-      @category = @categories.where(:slug => params[:category_slug]).first!
+    elsif params[:slug]
+      @category = @categories.where(:slug => params[:slug]).first!
       scope = @category.posts.published
     else
       @blog.posts.published
