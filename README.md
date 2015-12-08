@@ -3,11 +3,6 @@
 
 ComfyBlog is an simple blog management engine for [ComfortableMexicanSofa](https://github.com/comfy/comfortable-mexican-sofa)
 
-## Features
-
-* Ability to set up multiple blogs per site
-* User defined layout per blog
-
 ## Installation
 
 Add gem definition to your Gemfile:
@@ -30,6 +25,13 @@ comfy_route :blog, :path => 'blog'
 ```
 
 You should also find view templates in `/app/views/blog` folder. Feel free to adjust them as you see fit.
+
+## Features
+
+* Ability to set up multiple blogs per site
+* User defined layout per blog
+
+# Changelog
 
 ---
 
