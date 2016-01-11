@@ -51,6 +51,8 @@ class Comfy::Blog::PostsController < Comfy::Blog::BaseController
     end
     @comment = @post.comments.new
 
+    @posts = @blog.posts.where.not(id: @post.id).last(3)
+
   rescue ActiveRecord::RecordNotFound
     render :cms_page => '/404', :status => 404
   end
